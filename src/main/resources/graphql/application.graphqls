@@ -1,0 +1,15 @@
+type Application {
+	id:ID!
+	name:String!
+}
+
+type Query {
+	findAllApplications: [Application]!
+	countApplication: Long!
+}
+
+type Mutation {
+	newApplication(name:String!) : Application!
+	deleteApplication(id:ID!) : Boolean
+	updateApplicatioName(newName:String!,id:ID!):Application!
+}
